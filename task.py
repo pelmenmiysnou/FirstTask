@@ -1,8 +1,9 @@
 a= int(input())
 s=0
-for i in range(1,a+1):
-    s+=i**3
-print(s)
+if a>0 and a<100:
+   for i in range(1,a+1):
+       s+=i**3
+   print(s)
 
 
 for i in range(1,10):
