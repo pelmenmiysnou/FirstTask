@@ -10,7 +10,6 @@ for i in range(1,10):
         print("%3d" % (i * j), end="")
     print()
     
-print() 
         
 for i in range(9,0,-1):
     for j in range(1,10):
