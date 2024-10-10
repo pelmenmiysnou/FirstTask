@@ -1,31 +1,31 @@
 #1
-#s='нннщщщнннзллллннннннннгоооооол'
-#n=0
-#e=0
-#o=0
-#t=0
-#b=True
-#for i in range(len(s)):
-#    if s[i]=='н' and b==True:
-#        o=i
-#        b=False
-#    if s[i]!='н' and b==False:
-#        t=i-1
- #       b=True
-#    if t-o>e-n:
-#        e,n=t,o
-#q,w=s[:14],s[22:]
-#print(q+'!'*(e-n+1)+w,e-n+1)
+s='нннщщщнннзллллннннннннгоооооол'
+n=0
+e=0
+o=0
+t=0
+b=True
+for i in range(len(s)):
+   if s[i]=='н' and b==True:
+       o=i
+       b=False
+   if s[i]!='н' and b==False:
+       t=i-1
+       b=True
+   if t-o>e-n:
+       e,n=t,o
+q,w=s[:14],s[22:]
+print(q+'!'*(e-n+1)+w,e-n+1)
 
 #2        
-#s='adgfheudfgi(aelghjjdlighae)lkaehg;ahe'
-#a,b=0,0
-#for i in range(len(s)):
- #   if s[i]=='(':
-#        a=i
-#    if s[i]==')': b=i
-#s=s[:b]
-#print(s[a+1:])
+s='adgfheudfgi(aelghjjdlighae)lkaehg;ahe'
+a,b=0,0
+for i in range(len(s)):
+   if s[i]=='(':
+       a=i
+   if s[i]==')': b=i
+s=s[:b]
+print(s[a+1:])
 
 #3    
 s=' '+ '''Поднял он АлИлУя голову от карты и Абстракция, авария, аллея. Аакция, ария, алля.уставился в Oкно. И я тоже уставился в окно. Стекло в
