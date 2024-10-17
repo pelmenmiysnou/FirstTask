@@ -1,17 +1,17 @@
-#import math
-#def f(x):
-#    if x[0] ==0 and x[1]==0: return None
-#    if x[0]==0 and x[1]>0 :return 1.5707963267948966
-#    if x[0]==0 : return 4.710796326794897
-#    if x[0]<0 and x[1]<0: return math.atan(x[1]/x[0])+3.14
-#    if x[0]<0: return math.atan(x[1]/x[0])+3.14
-#    return math.atan(x[1]/x[0])+6.28
-#a=[float(i) for i in input('x y').split()]
-#b=[float(i) for i in input('x y').split()]
-#c=[float(i) for i in input('x y').split()]
-#if f(a)<f(b) and f(a)<f(c):print(a)
-#elif f(b)<f(c): print(b)
-#else: print(c)
+import math
+def f(x):
+   if x[0] ==0 and x[1]==0: return None
+   if x[0]==0 and x[1]>0 :return 1.5707963267948966
+   if x[0]==0 : return 4.710796326794897
+   if x[0]<0 and x[1]<0: return math.atan(x[1]/x[0])+3.14
+   if x[0]<0: return math.atan(x[1]/x[0])+3.14
+   return math.atan(x[1]/x[0])+6.28
+a=[float(i) for i in input('x y').split()]
+b=[float(i) for i in input('x y').split()]
+c=[float(i) for i in input('x y').split()]
+if f(a)<f(b) and f(a)<f(c):print(a)
+elif f(b)<f(c): print(b)
+else: print(c)
 
 def es(x):
     b=True
@@ -21,8 +21,6 @@ def es(x):
             b=False
             break
     return(b)
-
-
 def pol(x):
     b=bin(x)[2:]
     f=True
