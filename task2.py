@@ -1,40 +1,55 @@
-#1
-s='нннщщщнннзллллннннннннгоооооол'
-n=0
-e=0
-o=0
-t=0
-b=True
-for i in range(len(s)):
-   if s[i]=='н' and b==True:
-       o=i
-       b=False
-   if s[i]!='н' and b==False:
-       t=i-1
-       b=True
-   if t-o>e-n:
-       e,n=t,o
-q,w=s[:14],s[22:]
-print(q+'!'*(e-n+1)+w,e-n+1)
+import math
 
-#2        
-s='adgfheudfgi(aelghjjdlighae)lkaehg;ahe'
-a,b=0,0
-for i in range(len(s)):
-   if s[i]=='(':
-       a=i
-   if s[i]==')': b=i
-s=s[:b]
-print(s[a+1:])
 
-#3    
-s=' '+ '''Поднял он АлИлУя голову от карты и Абстракция, авария, аллея. Аакция, ария, алля.уставился в Oкно. И я тоже уставился в окно. Стекло в
-окне толстое, свинцовое, а за стеклом Зона-матушка — вот она, рукой подать, вся как на
-ладони с двенадцатого этажа. Так вот посмотришь на нее — земля как земля. Солнце на нее
-как на всю остальную землю светит, и ничего вроде бы на ней не изменилось, все вроде бы
-как тринадцать лет назад.'''
-s=s.lower().replace('.',' ').replace('—',' ').replace(',',' ').replace('!',' ').replace('?',' ').replace('(',' ').replace(')',' ')
-s=s.split()
-s=[i for i in s if i[0]=='а' and i[-1]=='я']
-for i in s:
-    print(i,end=' ')
+a = float(input("введите первое делимое: \n"))
+b = float(input("пожалуйста, введите делитель: \n"))
+if (b != 0):
+    print(a/b)
+else:
+    print("div on 0!!!!")
+
+
+a = float(input("на какую сумму вы закупились? \n"))
+if (a > 20):
+  b = a * (1 - 1 * (35/100))
+  print(f'ваша скидка: {round(a * 35/100, 2)}, к оплате: {round(b, 2)}')
+else:
+  print(f'Скидки нет, к оплате: {a}')
+
+
+month = int(input("пожалуйста, введите номер месяца: \n"))
+if month < 1 or month > 12:
+  print("неверный номер!")
+else:
+  if month > 2 and month <= 5:
+    print("Весна")
+    if month == 3:
+      print('Март')
+    elif month == 4:
+      print('Апрель')
+    elif month == 5:
+      print('Май')
+  elif month > 5 and month <= 8:
+    print("Лето")
+    if month == 6:
+      print('Июнь')
+    elif month == 7:
+      print('Июль')
+    elif month == 8:
+      print('Август')
+  elif month > 8 and month <= 11:
+    print("Осень")
+    if month == 9:
+      print('Сентябрь')
+    elif month == 10:
+      print('Октябрь')
+    elif month == 11:
+      print('Ноябрь')
+  elif month == 1 or month == 2 or month == 12:
+    print("Зима")
+    if month == 1:
+      print('Январь')
+    elif month == 2:
+      print('Февраль')
+    elif month == 12:
+      print('Декабрь')
