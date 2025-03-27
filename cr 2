@@ -1,0 +1,33 @@
+class ComplexNumber:
+
+    def __init__(self, real, imag):
+        self.__real = self.validate(real)
+        self.__imag = self.validate(imag)
+
+    @staticmethod
+    def validate(num):
+        if not isinstance(num, int) and not isinstance(num, float):
+            raise TypeError("not my type")
+        else:
+            return num
+        
+    @property
+    def real(self): return self.__real
+
+    @property
+    def imag(self): return self.__imag
+
+    def __add__(self, other):
+        if not isinstance(other, ComplexNumber): raise TypeError("not complex")
+        else:
+            return ComplexNumber(self.__real + other.__real, self.__imag + other.__imag)
+        
+    def __radd__(self, other):
+        return self.__add__(other)
+    
+c1 = ComplexNumber(1, 2)  
+c2 = ComplexNumber(3, 4)  
+c3 = c1 + c2  # ComplexNumber(4,6)  
+print(c3.__dict__)
+#c4 = c1 + 5   # TypeError  
+#c5 = ComplexNumber("a", 2)  # TypeError 
